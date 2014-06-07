@@ -1,0 +1,19 @@
+* {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+html {
+  background: #FAFAFA;
+  font-family: sans-serif;
+}
+#wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+/* FOOTER STYLES */
+footer {
+  
+}

@@ -1,0 +1,20 @@
+
+/* USE THE LEMONADE TRICK TO USE WILDCARD selectors [.flip-^] 
+.flip-right,
+.flip-down {
+  perspective: 1700px;
+  perspective-origin: 0 50%;
+  width: 10%;
+}
+.flip-right:hover{
+  border-left: 20px solid black;
+  width: 160px;
+  transition: border-left 0.5s, width 0.5s;
+}
+
+.flip-down:hover {
+  border-top: 20px solid black;
+  transition: border-top 0.5s;
+}
+
+*/
