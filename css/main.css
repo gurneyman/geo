@@ -12,6 +12,12 @@ html {
   margin: 0 auto;
 }
 
+/* Makin' Images a bit sexier */
+img {
+  margin: 1.618%;
+  border: 1.618px solid #3366CC;
+  border-radius: 16.18px; 
+}
 
 /* FOOTER STYLES */
 footer {
