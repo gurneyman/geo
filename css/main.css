@@ -14,12 +14,46 @@ html {
 
 /* Makin' Images a bit sexier */
 img {
+  width: 80%;
+  height: auto;
   margin: 1.618%;
   border: 1.618px solid #3366CC;
   border-radius: 16.18px; 
 }
-
+.photo{
+  position: relative;
+  float: left;
+}
+.avatar{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  width: 50px; /* Height should still be auto */
+  z-index: 2;
+}
+.user-name {
+position: absolute;
+bottom: 20px;
+left: 55px;
+height: 50px;
+width: 60%;
+overflow: hidden;
+padding: 15px 20px;
+background: white;
+z-index: 1;
+border: 1px solid blue;
+}
+.heart{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
 /* FOOTER STYLES */
 footer {
-  
+  clear: both;
 }
