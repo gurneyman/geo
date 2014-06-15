@@ -11,25 +11,28 @@ html {
   width: 75%;
   margin: 0 auto;
 }
-
+h1{
+  text-align: center;
+}
 /* Makin' Images a bit sexier */
 img {
-  width: 80%;
+  width: 100%;
   height: auto;
-  margin: 1.618%;
   border: 1.618px solid #3366CC;
   border-radius: 16.18px; 
 }
 .photo{
+  width: 33.33333333%; /* three per row */
   position: relative;
   float: left;
+  padding: 1.618% 1.66666666666667%; /* 10%/ 6 = 1.6666666667% */
 }
 .avatar{
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 9.708%;
+  right: 9.708%;
   margin: 0;
-  width: 50px; /* Height should still be auto */
+  width: 16.18%; /* Height should still be auto */
   z-index: 2;
 }
 .user-name {
@@ -43,15 +46,16 @@ padding: 15px 20px;
 background: white;
 z-index: 1;
 border: 1px solid blue;
+display: none;
 }
 .heart{
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 9.708%;
+  left: 9.708%;
   padding: 5px;
   background: white;
   border: 1px solid blue;
-  border-radius: 10px;
+  border-radius: 19.416%;
 }
 /* FOOTER STYLES */
 footer {
