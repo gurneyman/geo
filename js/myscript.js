@@ -1,7 +1,10 @@
 var Instagram = {};
 Instagram.Template = {};
 
-
+Instagram.config = {
+  clientID: "6737592e093845feaad96180d041d119",
+  apiHost: "https://api.instagram.com"
+};
 // HTML markup goes here
 Instagram.Template.Views = {
   "photo": "<div class='photo'>" +
@@ -40,7 +43,10 @@ return template;
 */
 (function(){
 
-
+  function generateUrl(tag){
+     var config = Instagram.config;
+     return config.apiHost + "/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=" + config.clientID;
+   }
   
   function toTemplate(photo){
     photo = {
@@ -54,25 +60,46 @@ return template;
     return Instagram.Template.generate('photo', photo);
   }
   function toScreen(photos){
-    
+    // Grab dat wrapper
+    var $photoWrap = $('div#photos-wrap');
+    // Where all the new pics go until we're ready to prepend
+    var newPics = '';
+    // Empty out the old stuff
+    $photoWrap.html('');
     $.each(photos.data, function(index, photo){
+      
       // Construct the image tag using the url in the photos object
       // as the src.
       photo = toTemplate(photo);
 
+      newPics += photo;
       // Append our fresh img tag to our photos-wrap div
-      $('div#photos-wrap').append(photo);
+      // $photoWrap.prepend(photo);
     });
+
+    $photoWrap.prepend(newPics);
+
   }
+
   function search(tag){
-    var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=6737592e093845feaad96180d041d119"
-    $.getJSON(url, toScreen);
+    $.getJSON(generateUrl(tag), toScreen);
   }
   // Expose search to global namespace
   Instagram.search = search;
 
+  
+
 })();
+
 
 Instagram.search('doge');
 
+$(document).ready(function(){
+ 
+   // Bind an event handler to the `click` event on the form's button
+  $('#search-button').click(function(){
+    var tag = $('input.search-tag').val();
+    Instagram.search(tag);
+  });
+});
 
