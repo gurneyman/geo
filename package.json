@@ -1,0 +1,27 @@
+{
+  "name": "geo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Based largely off [this tutorial](http://eduvoyage.com/instagram-search-app.html) (link broken now) from Omar Sahyoun. Much thanks.",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurneyman/geo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurneyman/geo/issues"
+  },
+  "homepage": "https://github.com/gurneyman/geo#readme",
+  "devDependencies": {
+    "webpack": "4.29.4",
+    "webpack-cli": "3.2.3"
+  },
+  "dependencies": {
+    "lodash": "4.17.11"
+  }
+}
