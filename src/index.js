@@ -1,11 +1,20 @@
-import _ from 'lodash';
+import join from 'lodash/join';
+
+import './css/main.css';
+
+import camelGuyImgSrc from './img/camel-guy.png';
 
 function component() {
-    let element = document.createElement('div');
+    const element = document.createElement('div');
   
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
+    element.innerHTML = join(['Hello', 'webpack'], ' ');
+    element.classList.add('hello');
+    
+    const camelGuyImg = new Image();
+    camelGuyImg.src = camelGuyImgSrc;
+
+    element.appendChild(camelGuyImg);
+    
     return element;
   }
   

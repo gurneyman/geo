@@ -61,3 +61,8 @@ display: none;
 footer {
   clear: both;
 }
+
+/* webpack tut styles */
+.hello {
+    color: red;
+}
